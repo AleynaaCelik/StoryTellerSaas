@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StoryTeller.Application.Features.Orders.Commands.Add
 {
-    public class StoryAddCommand
+    public class StoryAddCommand : IRequest<bool>
     {
         public string Title { get; set; }
         public List<string> Characters { get; set; }
